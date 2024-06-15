@@ -1,0 +1,11 @@
+C:\Users\karpov_di\Documents\git_remote\ClassifierIFC\ClassifierIFC\ClassifierIFC\bin\Debug\ClassifierIFC.exe.config
+C:\Users\karpov_di\Documents\git_remote\ClassifierIFC\ClassifierIFC\ClassifierIFC\bin\Debug\ClassifierIFC.exe
+C:\Users\karpov_di\Documents\git_remote\ClassifierIFC\ClassifierIFC\ClassifierIFC\bin\Debug\ClassifierIFC.pdb
+C:\Users\karpov_di\Documents\git_remote\ClassifierIFC\ClassifierIFC\ClassifierIFC\obj\Debug\ClassifierIFC.csproj.AssemblyReference.cache
+C:\Users\karpov_di\Documents\git_remote\ClassifierIFC\ClassifierIFC\ClassifierIFC\obj\Debug\ClassifierIFC.Forms.AboutProgramForm.resources
+C:\Users\karpov_di\Documents\git_remote\ClassifierIFC\ClassifierIFC\ClassifierIFC\obj\Debug\ClassifierIFC.MainForm.resources
+C:\Users\karpov_di\Documents\git_remote\ClassifierIFC\ClassifierIFC\ClassifierIFC\obj\Debug\ClassifierIFC.Properties.Resources.resources
+C:\Users\karpov_di\Documents\git_remote\ClassifierIFC\ClassifierIFC\ClassifierIFC\obj\Debug\ClassifierIFC.csproj.GenerateResource.cache
+C:\Users\karpov_di\Documents\git_remote\ClassifierIFC\ClassifierIFC\ClassifierIFC\obj\Debug\ClassifierIFC.csproj.CoreCompileInputs.cache
+C:\Users\karpov_di\Documents\git_remote\ClassifierIFC\ClassifierIFC\ClassifierIFC\obj\Debug\ClassifierIFC.exe
+C:\Users\karpov_di\Documents\git_remote\ClassifierIFC\ClassifierIFC\ClassifierIFC\obj\Debug\ClassifierIFC.pdb
