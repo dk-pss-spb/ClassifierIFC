@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\ClassifierIFC",
+    "\\ClassifierIFC\\Forms"
   ],
-  "SelectedNode": "\\C:\\Users\\karpov_di\\Documents\\git_remote\\ClassifierIFC",
+  "SelectedNode": "\\ClassifierIFC",
   "PreviewInSolutionExplorer": false
 }
