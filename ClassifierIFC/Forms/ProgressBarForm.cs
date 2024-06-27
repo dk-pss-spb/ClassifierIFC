@@ -1,5 +1,6 @@
 ﻿using ClassifierIFC.Parsers;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -65,43 +66,42 @@ namespace ClassifierIFC.Forms
                 $"\tОбработано {progressBar1.Value} из {progressBar1.Maximum}";
         }
 
-        public Task SearchObjects(Xbim.Common.IEntityCollection instances)//(string filePath)
+        public Task SearchObjects(Xbim.Common.IEntityCollection instances, string csv_fileName)
         {
             return Task.Run(() =>
             {
                 try
-                {
-                    string csv_fileName = Path.Combine(Path.GetDirectoryName(IFC_filePath),
-                        Path.GetFileNameWithoutExtension(IFC_filePath) +    //$"Классификатор_" +
-                        $" {DateTime.Now:yyyy-MM-dd-hh-mm-ss}" 
-                        + ".csv");
-
-                    this.Text += $": файл {csv_fileName}";
-
+                {            
                     using (StreamWriter w = new StreamWriter(csv_fileName))//, false, Encoding.GetEncoding(1251)))
                     {
                         TextWriter oldOut = Console.Out;
                         Console.SetOut(w);
 
+                        //первая строка данных: заголовки столбцов
                         Console.WriteLine($"Наименование элемента\t" +
                             $"Класс\t" +
                             $"Тип\t" +
                             $"Код");
 
-                        instances
-                        //.Where(x =>
-                        //        //(x is Xbim.Ifc2x3.Kernel.IfcObject) && 
-                        //        (x as Xbim.Ifc2x3.Kernel.IfcObject)?.GetPropertySingleNominalValue("Другая", "Категория") != null
-                        //        )
-                        .AsParallel()
-                        .Select(element => new OutClassifer(element, classifier))
-                        .ForAll(                        
-                        Work
-                        );
+                        ////решение "в лоб": весь вассив данных в обработку сразу.
+                        //instances.AsParallel().Select(element => new OutClassifer(element, classifier)).ForAll(Work);
+
+                        //решение "частями": берет из масива части по 'l' штук и обрабатывает. Скорости не добавит, а ресурсы берет поменьше.
+                        var list = instances.ToList();
+                        int l = 10000;
+                        for (int i = 0; i < list.Count; i += l)
+                        {
+                            List<Xbim.Common.IPersistEntity> array;
+                            if (l > list.Count - i)
+                                array = list.GetRange(i, list.Count - i);
+                            else
+                                array = list.GetRange(i, l);
+                            array.AsParallel().Select(element => new OutClassifer(element, classifier)).ForAll(Work);
+                        }
+
+
                         status.Report(GetStatus());
-
                         Console.SetOut(oldOut);
-
                         MessageBox.Show($"Анализ IFC завершен!\nРезультат анализа записан в файл:\n{csv_fileName}", "Успешно", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
@@ -129,12 +129,19 @@ namespace ClassifierIFC.Forms
         {           
 
             string ifcFullName = IFC_filePath;
+            string csv_fileName = Path.Combine(Path.GetDirectoryName(IFC_filePath),
+                        Path.GetFileNameWithoutExtension(IFC_filePath) +    //$"Классификатор_" +
+                        $" {DateTime.Now:yyyy-MM-dd-hh-mm-ss}"
+                        + ".csv");
+
+            this.Text += $": файл {csv_fileName}";
+
             using (var model = IfcStore.Open(ifcFullName))
             {
                 var instances = model.Instances;
                 progressBar1.Maximum = (int)instances.Count + 1;
 
-                await SearchObjects(instances);
+                await SearchObjects(instances, csv_fileName);
                 this.DialogResult = DialogResult.OK;
                 this.Close(); // Закрываем текущую форму
             }

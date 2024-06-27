@@ -7,7 +7,7 @@
       "RelativeMoniker": "D:0:0:{E8366E04-A2E2-47CF-9ECD-805F047A4601}|ClassifierIFC\\ClassifierIFC.csproj|solutionrelative:classifierifc\\forms\\progressbarform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E8366E04-A2E2-47CF-9ECD-805F047A4601}|ClassifierIFC\\ClassifierIFC.csproj|c:\\users\\karpov_di\\documents\\git_remote\\classifierifc\\classifierifc\\parsers\\classifier_json.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E8366E04-A2E2-47CF-9ECD-805F047A4601}|ClassifierIFC\\ClassifierIFC.csproj|C:\\Users\\karpov_di\\Documents\\git_remote\\ClassifierIFC\\classifierifc\\parsers\\classifier_json.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E8366E04-A2E2-47CF-9ECD-805F047A4601}|ClassifierIFC\\ClassifierIFC.csproj|solutionrelative:classifierifc\\parsers\\classifier_json.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -32,7 +32,7 @@
               "RelativeDocumentMoniker": "ClassifierIFC\\Parsers\\Classifier_JSON.cs",
               "ToolTip": "C:\\Users\\karpov_di\\Documents\\git_remote\\ClassifierIFC\\ClassifierIFC\\Parsers\\Classifier_JSON.cs",
               "RelativeToolTip": "ClassifierIFC\\Parsers\\Classifier_JSON.cs",
-              "ViewState": "AQIAAB8AAAAAAAAAAAAmwEoAAAAAAAAA",
+              "ViewState": "AQIAABYAAAAAAAAAAAAkwBwAAABGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-26T20:12:19.265Z",
               "EditorCaption": ""
@@ -45,7 +45,7 @@
               "RelativeDocumentMoniker": "ClassifierIFC\\Forms\\ProgressBarForm.cs",
               "ToolTip": "C:\\Users\\karpov_di\\Documents\\git_remote\\ClassifierIFC\\ClassifierIFC\\Forms\\ProgressBarForm.cs",
               "RelativeToolTip": "ClassifierIFC\\Forms\\ProgressBarForm.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAABgAAAAAAAAA",
+              "ViewState": "AQIAAFYAAAAAAAAAAAAvwGoAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-25T20:03:44.942Z",
               "EditorCaption": ""
