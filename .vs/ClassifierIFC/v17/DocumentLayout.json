@@ -18,11 +18,15 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
@@ -32,7 +36,7 @@
               "RelativeDocumentMoniker": "ClassifierIFC\\Parsers\\Classifier_JSON.cs",
               "ToolTip": "C:\\Users\\karpov_di\\Documents\\git_remote\\ClassifierIFC\\ClassifierIFC\\Parsers\\Classifier_JSON.cs",
               "RelativeToolTip": "ClassifierIFC\\Parsers\\Classifier_JSON.cs",
-              "ViewState": "AQIAABYAAAAAAAAAAAAkwBwAAABGAAAA",
+              "ViewState": "AQIAADcAAAAAAAAAAAA2wEQAAAAzAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-26T20:12:19.265Z",
               "EditorCaption": ""
@@ -45,7 +49,7 @@
               "RelativeDocumentMoniker": "ClassifierIFC\\Forms\\ProgressBarForm.cs",
               "ToolTip": "C:\\Users\\karpov_di\\Documents\\git_remote\\ClassifierIFC\\ClassifierIFC\\Forms\\ProgressBarForm.cs",
               "RelativeToolTip": "ClassifierIFC\\Forms\\ProgressBarForm.cs",
-              "ViewState": "AQIAAFYAAAAAAAAAAAAvwGoAAAAAAAAA",
+              "ViewState": "AQIAAEoAAAAAAAAAAAAvwFIAAAAmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-25T20:03:44.942Z",
               "EditorCaption": ""

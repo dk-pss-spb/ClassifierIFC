@@ -83,21 +83,21 @@ namespace ClassifierIFC.Forms
                             $"Тип\t" +
                             $"Код");
 
-                        ////решение "в лоб": весь вассив данных в обработку сразу.
-                        //instances.AsParallel().Select(element => new OutClassifer(element, classifier)).ForAll(Work);
+                        //решение "в лоб": весь вассив данных в обработку сразу.
+                        instances.AsParallel().Select(element => new OutClassifer(element, classifier)).ForAll(Work);
 
-                        //решение "частями": берет из масива части по 'l' штук и обрабатывает. Скорости не добавит, а ресурсы берет поменьше.
-                        var list = instances.ToList();
-                        int l = 10000;
-                        for (int i = 0; i < list.Count; i += l)
-                        {
-                            List<Xbim.Common.IPersistEntity> array;
-                            if (l > list.Count - i)
-                                array = list.GetRange(i, list.Count - i);
-                            else
-                                array = list.GetRange(i, l);
-                            array.AsParallel().Select(element => new OutClassifer(element, classifier)).ForAll(Work);
-                        }
+                        ////решение "частями": берет из масива части по 'l' штук и обрабатывает. Скорости не добавит, а ресурсы берет поменьше.
+                        //var list = instances.ToList();
+                        //int l = 10000;
+                        //for (int i = 0; i < list.Count; i += l)
+                        //{
+                        //    List<Xbim.Common.IPersistEntity> array;
+                        //    if (l > list.Count - i)
+                        //        array = list.GetRange(i, list.Count - i);
+                        //    else
+                        //        array = list.GetRange(i, l);
+                        //    array.AsParallel().Select(element => new OutClassifer(element, classifier)).ForAll(Work);
+                        //}
 
 
                         status.Report(GetStatus());
